@@ -36,7 +36,7 @@
                         <Label text="Nome:" />
                         <Label text="CPF:" GridPane.rowIndex="1" />
                         <Label text="Data de nascimento:" GridPane.rowIndex="2" />
-                        <Label text="Cartão de vacina:" GridPane.rowIndex="3" />
+                        <Label text="Id:" GridPane.rowIndex="3" />
                         <TextField prefHeight="22.0" prefWidth="279.0" styleClass="Text-Field" GridPane.columnIndex="1" />
                         <TextField prefHeight="14.0" prefWidth="279.0" styleClass="Text-Field" stylesheets="@css/textfield.css" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                         <TextField prefHeight="14.0" prefWidth="279.0" styleClass="Text-Field" stylesheets="@css/textfield.css" GridPane.columnIndex="1" GridPane.rowIndex="2" />
@@ -60,7 +60,7 @@
                   </Group>
                </children>
             </Group>
-            <Label layoutX="285.0" layoutY="52.0" />
+            <Label layoutX="262.0" layoutY="30.0" prefHeight="18.0" prefWidth="89.0" />
          </children></AnchorPane>
   </content>
 </TitledPane>
