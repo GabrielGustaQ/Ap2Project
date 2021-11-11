@@ -13,11 +13,10 @@
 
 <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@css/textfield.css" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
   <tabs>
-    <Tab text="Cidadão">
+    <Tab text="Vacinadores">
       <content>
-        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="Anchorpane" stylesheets="@css/Login.css">
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="Anchorpane-Agente" stylesheets="@css/Login.css">
                <children>
-                  <Group layoutX="187.0" layoutY="125.0" />
                   <Group layoutX="200.0" layoutY="117.0">
                      <children>
                         <GridPane>
@@ -30,10 +29,10 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                            </rowConstraints>
                            <children>
-                              <Label text="Cpf:" />
-                              <Label text="Senha:" GridPane.rowIndex="1" />
-                              <TextField style="-fx-border-radius: 10;" styleClass="Text-Field" stylesheets="@css/textfield.css" GridPane.columnIndex="1" />
-                              <TextField style="-fx-border-radius: 10;" styleClass="Text-Field" stylesheets="@css/textfield.css" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label styleClass="Label" text="Cpf:" textFill="#050505" />
+                              <Label styleClass="Label" text="Senha:" textFill="#050505" GridPane.rowIndex="1" />
+                              <TextField style="-fx-border-radius: 10;" styleClass="Text-Field" GridPane.columnIndex="1" />
+                              <TextField style="-fx-border-radius: 10;" styleClass="Text-Field" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                            </children>
                         </GridPane>
                         <Group layoutX="35.0" layoutY="70.0">
@@ -50,7 +49,7 @@
     </Tab>
       <Tab text="Admin">
          <content>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="Anchorpane2" stylesheets="@css/Login.css">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="Anchorpane-Admin" stylesheets="@css/Login.css">
                <children>
                   <Group layoutX="200.0" layoutY="117.0">
                      <children>
@@ -83,10 +82,11 @@
             </AnchorPane>
          </content>
       </Tab>
-    <Tab text="Vacinadores">
+    <Tab text="Cidadão">
       <content>
-        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="Anchorpane-cidadao" stylesheets="@css/Login.css">
                <children>
+                  <Group layoutX="187.0" layoutY="125.0" />
                   <Group layoutX="200.0" layoutY="117.0">
                      <children>
                         <GridPane>
@@ -99,10 +99,10 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                            </rowConstraints>
                            <children>
-                              <Label text="Cpf:" />
-                              <Label text="Senha:" GridPane.rowIndex="1" />
-                              <TextField style="-fx-border-radius: 10;" styleClass="Text-Field" GridPane.columnIndex="1" />
-                              <TextField style="-fx-border-radius: 10;" styleClass="Text-Field" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label styleClass="Label" text="Cpf:" />
+                              <Label styleClass="Label" text="Senha:" GridPane.rowIndex="1" />
+                              <TextField style="-fx-border-radius: 10;" styleClass="Text-Field" stylesheets="@css/textfield.css" GridPane.columnIndex="1" />
+                              <TextField style="-fx-border-radius: 10;" styleClass="Text-Field" stylesheets="@css/textfield.css" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                            </children>
                         </GridPane>
                         <Group layoutX="35.0" layoutY="70.0">

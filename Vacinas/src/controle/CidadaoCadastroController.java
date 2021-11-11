@@ -38,7 +38,7 @@ public class CidadaoCadastroController implements Initializable {
     @FXML
     void confirmaCadastro(ActionEvent event) {
         DadosCadastrais dc = new DadosCadastrais();
-        dc.CadastrarCidadao(tfNome.getText(), tfCpf, tfNascimento, tfCartaoVacina, psSenha, psConSenha)
+        dc.cadastrarCidadao(tfNome.getText(), tfCpf.getText(), tfNascimento.getText(), tfCartaoVacina.getText(), psSenha.getText(), psConSenha.getText());
     }
 
     @Override
