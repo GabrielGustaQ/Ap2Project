@@ -11,13 +11,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import java.util.logging.Level;
-import java.net.URL;
-import java.util.ResourceBundle;
-
-
 
 public class AdminCadastroController {
 
@@ -51,7 +46,7 @@ public class AdminCadastroController {
     @FXML
     void confirmaButton(ActionEvent event) {
         try {
-            if(psConfirmaSenha.equals(psSenha)){
+            if(psConfirmaSenha.getText().equals(psSenha.getText())){
                 System.out.println("teste 1");
                 DadosCadastrais dc = new DadosCadastrais();
                 dc.cadastrarAdmin(tfNome.getText(), psSenha.getText(), tfNascimento.getText(), tfCpf.getText(), tfid.getText());

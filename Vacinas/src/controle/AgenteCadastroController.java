@@ -5,16 +5,11 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import java.net.URL;
-import java.util.ResourceBundle;
-import javafx.scene.control.Button;
 import data.DadosCadastrais;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -53,7 +48,7 @@ public class AgenteCadastroController {
     @FXML
     void confirmaButton(ActionEvent event) {
         try {
-            if(psConfirmasenha.equals(psSenha)){
+            if(psConfirmasenha.getText().equals(psSenha.getText())){
                 System.out.println("teste 1");
                 DadosCadastrais dc = new DadosCadastrais();
                 dc.cadastrarAgente(tfNome.getText(), psSenha.getText(), tfNascimento.getText(), tfCpf.getText(), tfRegistro.getText());

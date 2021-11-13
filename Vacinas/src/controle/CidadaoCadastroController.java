@@ -49,7 +49,7 @@ public class CidadaoCadastroController {
     @FXML
     void confirmaButton(ActionEvent event) {
         try {
-            if(psConSenha.equals(psSenha)){
+            if(psConSenha.getText().equals(psSenha.getText())){
                 System.out.println("teste 1");
                 DadosCadastrais dc = new DadosCadastrais();
                 dc.cadastrarCidadao(tfCartaoVacina.getText(), tfNome.getText(), psSenha.getText(), tfNascimento.getText(), tfCPF.getText());

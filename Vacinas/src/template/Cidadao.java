@@ -1,8 +1,6 @@
 package template;
 
-import java.io.Serializable;
-
-public class Cidadao extends Usuario implements Serializable {
+public class Cidadao extends Usuario{
     int cartaoDeVacina;
 
     public Cidadao(int cartaoDeVacina, String nome, String senha, String dataNascimento, int CPF) {
