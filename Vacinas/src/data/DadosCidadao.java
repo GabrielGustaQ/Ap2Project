@@ -40,7 +40,7 @@ public class DadosCidadao {
         ObjectInputStream lerObj = new ObjectInputStream(fluxo);
         cidadao = (ArrayList<Cidadao>) lerObj.readObject();
         for(int i = 0; i<cidadao.size();i++){
-            if(cidadao.get(i).getId()== d.getId()){
+            if(cidadao.get(i).getCpf()== d.getCpf()){
                 cidadao.remove(i);
             }
         }

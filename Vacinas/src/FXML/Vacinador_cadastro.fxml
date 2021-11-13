@@ -46,7 +46,7 @@
                         <Label styleClass="Label" text="Confirmar senha:" GridPane.rowIndex="6" />
                         <PasswordField fx:id="psSenha" styleClass="Text-Field" stylesheets="@css/textfield.css" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                         <PasswordField fx:id="psConfirmasenha" styleClass="Text-Field" stylesheets="@css/textfield.css" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-                        <Label alignment="CENTER_RIGHT" prefHeight="18.0" prefWidth="282.0" textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                        <Label fx:id="psWarning" alignment="CENTER_RIGHT" prefHeight="18.0" prefWidth="282.0" textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="5">
                            <font>
                               <Font size="10.0" />
                            </font>

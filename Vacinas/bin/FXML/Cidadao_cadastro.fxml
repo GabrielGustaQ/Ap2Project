@@ -38,15 +38,15 @@
                         <Label styleClass="Label" text="CPF:" GridPane.rowIndex="1" />
                         <Label styleClass="Label" text="Data de nascimento:" GridPane.rowIndex="2" />
                         <Label styleClass="Label" text="Cartão de vacina:" GridPane.rowIndex="3" />
-                        <TextField prefHeight="22.0" prefWidth="279.0" styleClass="Text-Field" GridPane.columnIndex="1" />
-                        <TextField prefHeight="14.0" prefWidth="279.0" styleClass="Text-Field" stylesheets="@css/textfield.css" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <TextField prefHeight="14.0" prefWidth="279.0" styleClass="Text-Field" stylesheets="@css/textfield.css" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                        <TextField styleClass="Text-Field" stylesheets="@css/textfield.css" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <TextField fx:id="tfNome" prefHeight="22.0" prefWidth="279.0" styleClass="Text-Field" GridPane.columnIndex="1" />
+                        <TextField fx:id="tfCPF" prefHeight="14.0" prefWidth="279.0" styleClass="Text-Field" stylesheets="@css/textfield.css" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="tfNascimento" prefHeight="14.0" prefWidth="279.0" styleClass="Text-Field" stylesheets="@css/textfield.css" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField fx:id="tfCartaoVacina" styleClass="Text-Field" stylesheets="@css/textfield.css" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                         <Label styleClass="Label" text="Senha:" GridPane.rowIndex="4" />
                         <Label styleClass="Label" text="Confirmar senha:" GridPane.rowIndex="6" />
-                        <PasswordField styleClass="Text-Field" stylesheets="@css/textfield.css" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                        <PasswordField styleClass="Text-Field" stylesheets="@css/textfield.css" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-                        <Label alignment="CENTER_RIGHT" prefHeight="18.0" prefWidth="282.0" textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                        <PasswordField fx:id="psSenha" styleClass="Text-Field" stylesheets="@css/textfield.css" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <PasswordField fx:id="psConSenha" styleClass="Text-Field" stylesheets="@css/textfield.css" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <Label fx:id="psWarning" alignment="CENTER_RIGHT" prefHeight="18.0" prefWidth="282.0" textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="5">
                            <font>
                               <Font size="10.0" />
                            </font>
@@ -55,8 +55,8 @@
                   </GridPane>
                   <Group layoutX="133.0" layoutY="232.0">
                      <children>
-                        <Button mnemonicParsing="false" text="Confirmar" />
-                        <Button layoutX="83.0" mnemonicParsing="false" text="Cancelar" />
+                        <Button mnemonicParsing="false" onAction="#confirmaButton" text="Confirmar" />
+                        <Button layoutX="83.0" mnemonicParsing="false" onAction="#cancelButton" text="Cancelar" />
                      </children>
                   </Group>
                </children>

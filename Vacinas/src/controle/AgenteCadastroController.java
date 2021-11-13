@@ -7,12 +7,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
 import data.DadosCadastrais;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -48,6 +43,9 @@ public class AgenteCadastroController {
     private TextField tfRegistro;
 
     @FXML
+    private Label psWarning;
+
+    @FXML
     void cancelButton(ActionEvent event) {
 
     }
@@ -55,10 +53,14 @@ public class AgenteCadastroController {
     @FXML
     void confirmaButton(ActionEvent event) {
         try {
-            System.out.println("teste 1");
-            DadosCadastrais dc = new DadosCadastrais();
-            dc.cadastrarAdmin(tfNome.getText(), tfCpf.getText(), tfNascimento.getText(), tfCartaoVacina.getText(), psSenha.getText(), psConSenha.getText());
-            labelWarning.setText("Cadastrado Com Sucesso");
+            if(psConfirmasenha.equals(psSenha)){
+                System.out.println("teste 1");
+                DadosCadastrais dc = new DadosCadastrais();
+                dc.cadastrarAgente(tfNome.getText(), psSenha.getText(), tfNascimento.getText(), tfCpf.getText(), tfRegistro.getText());
+                labelWarning.setText("Cadastrado Com Sucesso");
+            }else{
+                psWarning.setText("senhas são diferentes!!!");
+            }
 
         } catch (IOException ex) {
             Logger.getLogger(CidadaoCadastroController.class.getName()).log(Level.SEVERE, null, ex);
@@ -67,6 +69,14 @@ public class AgenteCadastroController {
         } catch (Exception ex) {
             Logger.getLogger(CidadaoCadastroController.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
+    public void start(Stage stage) throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("/FXML/Vacinador_cadastro.fxml"));
+        
+        Scene scene = new Scene(root);
+        
+        stage.setScene(scene);
+        stage.show();
     }
 
 }

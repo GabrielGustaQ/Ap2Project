@@ -10,10 +10,6 @@ public class Cidadao extends Usuario implements Serializable {
         this.cartaoDeVacina = cartaoDeVacina;
     }
     
-    public int getId(){
-        return super.getId();
-    }
-    
     @Override
     public int getCpf(){
         return super.getCpf();

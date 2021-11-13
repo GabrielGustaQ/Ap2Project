@@ -38,7 +38,6 @@ public class LoginController implements Initializable {
             for(int i=0;i<a.size();i++){
                 if(a.get(i).getCpf()==Integer.parseInt(tfCpf.getText()) && tfSenha.getText().equals(a.get(i).getSenha())){
                     d = a.get(i);
-                }else{
                 }
             }
             if(d == null){
