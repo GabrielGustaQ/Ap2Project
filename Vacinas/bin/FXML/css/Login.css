@@ -1,8 +1,14 @@
-.Anchorpane-cadastro{
-    -fx-background-image:url("img/Cadastro.png");
+.Anchorpane-Cadastro{
+    -fx-background-image:url("img/cadastro_newimage.png");
     -fx-height:540px;
     -fx-vidth: 960px;
 }
+.Anchorpane-CadastroAgente{
+    -fx-background-image:url("img/Cadastro-AgenteSaude.png");
+    -fx-height:720px;
+    -fx-vidth: 1080px;
+}
+
 .Anchorpane-Admin{
     -fx-background-image:url("img/LoginAdmin.png");
     -fx-height:540px;

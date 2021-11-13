@@ -13,6 +13,41 @@
 
 <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@css/textfield.css" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
   <tabs>
+    <Tab text="Cidadão">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="Anchorpane-cidadao" stylesheets="@css/Login.css">
+               <children>
+                  <Group layoutX="187.0" layoutY="125.0" />
+                  <Group layoutX="200.0" layoutY="117.0">
+                     <children>
+                        <GridPane>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label styleClass="Label" text="Cpf:" />
+                              <Label styleClass="Label" text="Senha:" GridPane.rowIndex="1" />
+                              <TextField style="-fx-border-radius: 10;" styleClass="Text-Field" stylesheets="@css/textfield.css" GridPane.columnIndex="1" />
+                              <TextField style="-fx-border-radius: 10;" styleClass="Text-Field" stylesheets="@css/textfield.css" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                           </children>
+                        </GridPane>
+                        <Group layoutX="35.0" layoutY="70.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#loginCidadao" text="Login" />
+                              <Button layoutY="40.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="130.0" text="esqueci minha senha" />
+                              <Button layoutX="75.0" mnemonicParsing="false" onAction="#cadCidadao" text="Sign-in" />
+                           </children>
+                        </Group>
+                     </children>
+                  </Group>
+               </children></AnchorPane>
+      </content>
+    </Tab>
     <Tab text="Vacinadores">
       <content>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="Anchorpane-Agente" stylesheets="@css/Login.css">
@@ -37,9 +72,9 @@
                         </GridPane>
                         <Group layoutX="35.0" layoutY="70.0">
                            <children>
-                              <Button mnemonicParsing="false" text="Login" />
+                              <Button mnemonicParsing="false" onAction="#loginAgente" text="Login" />
                               <Button layoutY="40.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="130.0" text="esqueci minha senha" />
-                              <Button layoutX="75.0" mnemonicParsing="false" text="Sign-in" />
+                              <Button layoutX="75.0" mnemonicParsing="false" onAction="#cadAgente" text="Sign-in" />
                            </children>
                         </Group>
                      </children>
@@ -71,9 +106,9 @@
                         </GridPane>
                         <Group layoutX="35.0" layoutY="70.0">
                            <children>
-                              <Button mnemonicParsing="false" text="Login" />
+                              <Button mnemonicParsing="false" onAction="#loginAdmin" text="Login" />
                               <Button layoutY="40.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="130.0" text="esqueci minha senha" />
-                              <Button layoutX="75.0" mnemonicParsing="false" text="Sign-in" />
+                              <Button layoutX="75.0" mnemonicParsing="false" onAction="#cadAdimin" text="Sign-in" />
                            </children>
                         </Group>
                      </children>
@@ -82,40 +117,5 @@
             </AnchorPane>
          </content>
       </Tab>
-    <Tab text="Cidadão">
-      <content>
-        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="Anchorpane-cidadao" stylesheets="@css/Login.css">
-               <children>
-                  <Group layoutX="187.0" layoutY="125.0" />
-                  <Group layoutX="200.0" layoutY="117.0">
-                     <children>
-                        <GridPane>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                           <children>
-                              <Label styleClass="Label" text="Cpf:" />
-                              <Label styleClass="Label" text="Senha:" GridPane.rowIndex="1" />
-                              <TextField style="-fx-border-radius: 10;" styleClass="Text-Field" stylesheets="@css/textfield.css" GridPane.columnIndex="1" />
-                              <TextField style="-fx-border-radius: 10;" styleClass="Text-Field" stylesheets="@css/textfield.css" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                           </children>
-                        </GridPane>
-                        <Group layoutX="35.0" layoutY="70.0">
-                           <children>
-                              <Button mnemonicParsing="false" text="Login" />
-                              <Button layoutY="40.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="130.0" text="esqueci minha senha" />
-                              <Button layoutX="75.0" mnemonicParsing="false" text="Sign-in" />
-                           </children>
-                        </Group>
-                     </children>
-                  </Group>
-               </children></AnchorPane>
-      </content>
-    </Tab>
   </tabs>
 </TabPane>
