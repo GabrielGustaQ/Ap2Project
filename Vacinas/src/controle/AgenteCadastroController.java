@@ -2,17 +2,23 @@ package controle;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import data.DadosCadastrais;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
+import javax.swing.JOptionPane;
+
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import template.AgenteSaude;
 
 public class AgenteCadastroController {
 
@@ -41,20 +47,41 @@ public class AgenteCadastroController {
     private Label psWarning;
 
     @FXML
-    void cancelButton(ActionEvent event) {
+    private Button confirmaButtonId;
 
+    @FXML
+    private Button cancelaButtonId;
+
+    @FXML
+    void cancelButton(ActionEvent event) {
+        Stage stage = (Stage) cancelaButtonId.getScene().getWindow(); 
+        stage.close();
     }
 
     @FXML
     void confirmaButton(ActionEvent event) {
         try {
-            if(psConfirmasenha.getText().equals(psSenha.getText())){
-                System.out.println("teste 1");
-                DadosCadastrais dc = new DadosCadastrais();
-                dc.cadastrarAgente(tfNome.getText(), psSenha.getText(), tfNascimento.getText(), tfCpf.getText(), tfRegistro.getText());
-                labelWarning.setText("Cadastrado Com Sucesso");
+            DadosCadastrais dc = new DadosCadastrais();
+            boolean existe = false;
+            ArrayList <AgenteSaude> ag = dc.listarAgente();
+                for(int i=0;i<ag.size();i++){
+                if(ag.get(i).getCpf() == Integer.parseInt(tfRegistro.getText())){
+                   existe = true;
+                }
+            }
+            
+            if(existe == false){
+                if(psConfirmasenha.getText().equals(psSenha.getText())){
+                    dc.cadastrarAgente(tfNome.getText(), psSenha.getText(), tfNascimento.getText(), tfCpf.getText(), tfRegistro.getText());
+                    JOptionPane.showMessageDialog(null,"Agente de Saude cadastrado com sucesso!!!");
+                    Stage stage = (Stage) confirmaButtonId.getScene().getWindow(); 
+                    stage.close(); 
+                    
+                }else{
+                    psWarning.setText("senhas são diferentes!!!");
+                }
             }else{
-                psWarning.setText("senhas são diferentes!!!");
+                labelWarning.setText("Agente de Saude já cadastrado !!!");
             }
 
         } catch (IOException ex) {

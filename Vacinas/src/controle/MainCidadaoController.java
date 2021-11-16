@@ -95,6 +95,7 @@ public class MainCidadaoController extends Application{
 
     @FXML
     private Button agendarButtonId;
+    
 
     @FXML
     void agendarButton(ActionEvent event) {

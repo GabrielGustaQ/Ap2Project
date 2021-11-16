@@ -56,7 +56,7 @@
                   <Group layoutX="133.0" layoutY="232.0">
                      <children>
                         <Button fx:id="confirmaButtonId" mnemonicParsing="false" onAction="#confirmaButton" text="Confirmar" />
-                        <Button layoutX="83.0" mnemonicParsing="false" onAction="#cancelButton" text="Cancelar" />
+                        <Button fx:id="cancelButtonId" layoutX="83.0" mnemonicParsing="false" onAction="#cancelButton" text="Cancelar" />
                      </children>
                   </Group>
                </children>
