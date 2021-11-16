@@ -46,15 +46,15 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <CheckBox fx:id="check1" disable="true" focusTraversable="false" mnemonicParsing="false" GridPane.columnIndex="1" />
-                  <CheckBox fx:id="check2" disable="true" focusTraversable="false" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <CheckBox fx:id="check3" disable="true" focusTraversable="false" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <CheckBox fx:id="check4" disable="true" focusTraversable="false" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                  <CheckBox fx:id="check5" disable="true" focusTraversable="false" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                  <CheckBox fx:id="check6" disable="true" focusTraversable="false" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                  <CheckBox fx:id="check7" disable="true" focusTraversable="false" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-                  <CheckBox fx:id="check8" disable="true" focusTraversable="false" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-                  <CheckBox fx:id="check9" disable="true" focusTraversable="false" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                  <CheckBox fx:id="check1" focusTraversable="false" mnemonicParsing="false" GridPane.columnIndex="1" />
+                  <CheckBox fx:id="check2" focusTraversable="false" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <CheckBox fx:id="check3" focusTraversable="false" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <CheckBox fx:id="check4" focusTraversable="false" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <CheckBox fx:id="check5" focusTraversable="false" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <CheckBox fx:id="check6" focusTraversable="false" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <CheckBox fx:id="check7" focusTraversable="false" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <CheckBox fx:id="check8" focusTraversable="false" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                  <CheckBox fx:id="check9" focusTraversable="false" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="8" />
                   <Label fx:id="covid1" styleClass="Label" text="Covid 1°" />
                   <Label fx:id="covid2" styleClass="Label" text="Covid 2°" GridPane.rowIndex="1" />
                   <Label fx:id="tetano" styleClass="Label" text="Tetano" GridPane.rowIndex="2" />

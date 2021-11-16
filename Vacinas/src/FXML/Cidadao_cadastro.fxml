@@ -55,13 +55,13 @@
                   </GridPane>
                   <Group layoutX="133.0" layoutY="232.0">
                      <children>
-                        <Button mnemonicParsing="false" onAction="#confirmaButton" text="Confirmar" />
+                        <Button fx:id="confirmaButtonId" mnemonicParsing="false" onAction="#confirmaButton" text="Confirmar" />
                         <Button layoutX="83.0" mnemonicParsing="false" onAction="#cancelButton" text="Cancelar" />
                      </children>
                   </Group>
                </children>
             </Group>
-            <Label fx:id="labelWarnig" layoutX="269.0" layoutY="27.0" prefHeight="18.0" prefWidth="59.0" styleClass="Label-Warning" />
+            <Label fx:id="labelWarnig" layoutX="213.0" layoutY="27.0" prefHeight="18.0" prefWidth="158.0" styleClass="Label-Warning" />
          </children>
          <stylesheets>
             <URL value="@css/textfield.css" />

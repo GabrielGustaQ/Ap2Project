@@ -2,6 +2,6 @@
     -fx-background-radius: 100;
 }   
 .Label-Warning{
-    -fx-text-fill: #25b13c;
-    -fx-font-weight:bold;
+    -fx-text-fill: #fa0000;
+    -fx-font-weight: bold;
 }
