@@ -19,8 +19,14 @@ public class Cidadao extends Usuario{
     }
 
     @Override
+    public String getNome(){
+        return super.getNome();
+    }
+
+    @Override
     public String toString() {
         return "Cidadao{" + "cartaoDeVacina=" + cartaoDeVacina + '}'+super.toString();
     }
+    
     
 }

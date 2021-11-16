@@ -14,7 +14,6 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-
 <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@css/main.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controle.MainCidadaoController">
    <children>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="Anchorpane">
@@ -22,7 +21,7 @@
             <Label layoutX="62.0" layoutY="14.0" styleClass="Label" text="Agendamento" />
             <DatePicker fx:id="datePicker" layoutX="12.0" layoutY="51.0" />
             <ChoiceBox fx:id="choiceBox" layoutX="12.0" layoutY="93.0" prefHeight="26.0" prefWidth="175.0" />
-            <Button layoutX="67.0" layoutY="323.0" mnemonicParsing="false" onAction="#agendarButton" text="Agendar">
+            <Button fx:id="agendarButtonId" layoutX="67.0" layoutY="323.0" mnemonicParsing="false" onAction="#agendarButton" text="Agendar">
                <styleClass>
                   <String fx:value="Label" />
                   <String fx:value="Button" />

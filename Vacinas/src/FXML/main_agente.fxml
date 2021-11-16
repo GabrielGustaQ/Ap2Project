@@ -18,7 +18,7 @@
          <children>
             <Label layoutX="89.0" layoutY="14.0" styleClass="Label" text="Pessoas Agendadas" />
             <ChoiceBox fx:id="choiceBox" layoutX="7.0" layoutY="48.0" prefHeight="26.0" prefWidth="274.0" />
-            <Button layoutX="117.0" layoutY="323.0" mnemonicParsing="false" onAction="#vacinarButton" text="Vacinar">
+            <Button fx:id="vacinaButtonId" layoutX="117.0" layoutY="323.0" mnemonicParsing="false" onAction="#vacinarButton" text="Vacinar">
                <styleClass>
                   <String fx:value="Label" />
                   <String fx:value="Button" />
