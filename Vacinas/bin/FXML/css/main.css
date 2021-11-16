@@ -1,0 +1,16 @@
+.Label{
+    -fx-text-fill: #ffffff;
+    -fx-font-weight:bold; 
+}
+
+.Button{
+    -fx-text-fill: #ffffff;
+    -fx-font-weight:bold; 
+    -fx-background-color: #007dfa;
+}
+
+.Anchorpane{
+    -fx-background-color: #002dfa;
+    -fx-border-radius: 8px;
+    -fx-border-color: #ffffff;
+}
