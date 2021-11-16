@@ -72,6 +72,8 @@ public class LoginController implements Initializable {
                 JOptionPane.showMessageDialog(null, "Acesso Negado");
             }else if(d.getCpf()==Integer.parseInt(cpfCidadao.getText()) && senhaCidadao.getText().equals(d.getSenha())){
                 JOptionPane.showMessageDialog(null, "Acesso Concedido");
+                MainCidadaoController c = new MainCidadaoController();
+                c.start(new Stage());
             }else{
                 JOptionPane.showMessageDialog(null, "Acesso Negado");
             }

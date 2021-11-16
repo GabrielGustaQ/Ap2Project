@@ -1,14 +1,22 @@
 package controle;
 
+import javafx.application.Application;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
+import javafx.stage.Stage;
 
-public class MainCidadaoController {
-
+public class MainCidadaoController extends Application{
+    
+    ObservableList<String> choiceList = FXCollections.observableArrayList("Covid 1°","Covid 2°","Tetano","Peste Bubonica","Febre Amarela","Variola","Febre Afitosa","Paralisia Infantil","Hidrofobia");
     @FXML
     private Label agendado1;
 
@@ -52,7 +60,7 @@ public class MainCidadaoController {
     private CheckBox check9;
 
     @FXML
-    private ChoiceBox<?> choiceBox;
+    private ChoiceBox choiceBox;
 
     @FXML
     private Label covid1;
@@ -88,6 +96,19 @@ public class MainCidadaoController {
     void agendarButton(ActionEvent event) {
 
     }
+    @FXML
+    private void initialize(){
+        choiceBox.setItems(choiceList);
+    }
+
+    public void start(Stage stage) throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("/FXML/main_cidadao.fxml"));
+        
+        Scene scene = new Scene(root);
+        
+        stage.setScene(scene);
+        stage.show();
+    } 
 
 }
 
