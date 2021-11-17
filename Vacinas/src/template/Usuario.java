@@ -29,10 +29,6 @@ abstract class Usuario implements Serializable {
     public String getSenha() {
         return senha;
     }
-
-    public String getNome() {
-        return nome;
-    }
     
     
 }

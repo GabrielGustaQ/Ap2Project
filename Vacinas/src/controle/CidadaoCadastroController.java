@@ -76,8 +76,8 @@ public class CidadaoCadastroController {
                 if(psConSenha.getText().equals(psSenha.getText())){
                     dc.cadastrarCidadao(tfCartaoVacina.getText(), tfNome.getText(), psSenha.getText(), tfNascimento.getText(), tfCPF.getText());
                     JOptionPane.showMessageDialog(null,"Cadastrado com sucesso!!!");
-                    Stage stage = (Stage) confirmaButtonId.getScene().getWindow(); 
-                    stage.close(); 
+                    Stage stage = (Stage) confirmaButtonId.getScene().getWindow(); //Obtendo a janela atual
+                    stage.close(); //Fechando o Stage
                     
                 }else{
                     psWarning.setText("senhas são diferentes!!!");

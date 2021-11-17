@@ -15,8 +15,6 @@ import java.util.logging.Logger;
 import javafx.fxml.Initializable;
 import javafx.stage.Stage;
 import javax.swing.JOptionPane;
-
-import template.AgenteSaude;
 import template.Cidadao;
 import template.Admin;
 
@@ -83,33 +81,7 @@ public class LoginController implements Initializable {
 
     @FXML
     void loginAgente(ActionEvent event) {
-        try {
-            DadosCadastrais dc = new DadosCadastrais();
-            ArrayList <AgenteSaude> ag = dc.listarAgente();
-            AgenteSaude a = null;
-            for(int i=0;i<ag.size();i++){
-                if(ag.get(i).getCpf()==Integer.parseInt(cpfCidadao.getText()) && senhaCidadao.getText().equals(ag.get(i).getSenha())){
-                    a = ag.get(i);
-                }
-            }
-            if(a == null){
-                JOptionPane.showMessageDialog(null, "Acesso Negado");
-            }else if(a.getCpf()==Integer.parseInt(cpfAgente.getText()) && senhaAgente.getText().equals(a.getSenha())){
-                JOptionPane.showMessageDialog(null, "Acesso Concedido");
-                MainCidadaoController c = new MainCidadaoController();
-                c.start(new Stage());
-            }else{
-                JOptionPane.showMessageDialog(null, "Acesso Negado");
-            }
-            
-            
-        } catch (IOException ex) {
-            Logger.getLogger(CidadaoCadastroController.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(CidadaoCadastroController.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (Exception ex) {
-            Logger.getLogger(CidadaoCadastroController.class.getName()).log(Level.SEVERE, null, ex);
-        }
+
     }
 
     @FXML

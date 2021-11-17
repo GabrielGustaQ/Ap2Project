@@ -8,7 +8,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.DatePicker;
@@ -94,13 +93,15 @@ public class MainCidadaoController extends Application{
     private Label variola;
 
     @FXML
+<<<<<<< HEAD
     private Button agendarButtonId;
     
 
     @FXML
+=======
+>>>>>>> parent of 3ef4c25 (att)
     void agendarButton(ActionEvent event) {
-        Stage stage = (Stage) agendarButtonId.getScene().getWindow(); 
-        stage.close(); 
+
     }
     @FXML
     private void initialize(){
