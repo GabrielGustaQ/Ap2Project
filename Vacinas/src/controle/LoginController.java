@@ -15,6 +15,9 @@ import java.util.logging.Logger;
 import javafx.fxml.Initializable;
 import javafx.stage.Stage;
 import javax.swing.JOptionPane;
+
+import template.Admin;
+import template.AgenteSaude;
 import template.Cidadao;
 
 public class LoginController implements Initializable {
@@ -49,12 +52,64 @@ public class LoginController implements Initializable {
 
     @FXML
     void loginAdmin(ActionEvent event) {
-
+        try {
+            DadosCadastrais dc = new DadosCadastrais();
+            ArrayList <Admin> a = dc.listarAdmin();
+            Admin d = null;
+            for(int i=0; i<a.size();i++){
+                if(a.get(i).getCpf()==Integer.parseInt(cpfAdmin.getText()) && senhaAdmin.getText().equals(a.get(i).getSenha())){
+                    d = a.get(i);
+                }
+            }
+            if(d == null){
+                JOptionPane.showMessageDialog(null, "Acesso Negado");
+            }else if(d.getCpf()==Integer.parseInt(cpfAdmin.getText()) && senhaAdmin.getText().equals(d.getSenha())){
+                JOptionPane.showMessageDialog(null, "Acesso Concedido");
+                MainAdminController c = new MainAdminController();
+                c.start(new Stage());
+            }else{
+                JOptionPane.showMessageDialog(null, "Acesso Negado");
+            }
+            
+            
+        } catch (IOException ex) {
+            Logger.getLogger(CidadaoCadastroController.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(CidadaoCadastroController.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (Exception ex) {
+            Logger.getLogger(CidadaoCadastroController.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     @FXML
     void loginAgente(ActionEvent event) {
-
+        try {
+            DadosCadastrais dc = new DadosCadastrais();
+            ArrayList <AgenteSaude> a = dc.listarAgente();
+            AgenteSaude d = null;
+            for(int i=0;i<a.size();i++){
+                if(a.get(i).getCpf()==Integer.parseInt(cpfAgente.getText()) && senhaAgente.getText().equals(a.get(i).getSenha())){
+                    d = a.get(i);
+                }
+            }
+            if(d == null){
+                JOptionPane.showMessageDialog(null, "Acesso Negado");
+            }else if(d.getCpf()==Integer.parseInt(cpfAgente.getText()) && senhaAgente.getText().equals(d.getSenha())){
+                JOptionPane.showMessageDialog(null, "Acesso Concedido");
+                MainAgenteController c = new MainAgenteController();
+                c.start(new Stage());
+            }else{
+                JOptionPane.showMessageDialog(null, "Acesso Negado");
+            }
+            
+            
+        } catch (IOException ex) {
+            Logger.getLogger(CidadaoCadastroController.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(CidadaoCadastroController.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (Exception ex) {
+            Logger.getLogger(CidadaoCadastroController.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     @FXML
