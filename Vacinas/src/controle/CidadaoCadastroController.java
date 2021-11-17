@@ -52,12 +52,8 @@ public class CidadaoCadastroController {
     private Button confirmaButtonId;
 
     @FXML
-    private Button cancelButtonId;
-
-    @FXML
     void cancelButton(ActionEvent event) {
-        Stage stage = (Stage) cancelButtonId.getScene().getWindow(); 
-        stage.close(); 
+        //CidadaoCadastroController.close();
     }
 
     @FXML

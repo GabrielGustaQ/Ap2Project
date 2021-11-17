@@ -1,6 +1,6 @@
 package controle;
 
-//Ligacao entre agente e cidado para vacina, sortear o agente vacinador,dados do admin(graficos), criar controle admin, configurar datas agendadas, 
+//FAZER AVISO DE LOGIN BOTÃO de cancelar, e fechar o panel;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -16,7 +16,6 @@ import javafx.fxml.Initializable;
 import javafx.stage.Stage;
 import javax.swing.JOptionPane;
 import template.Cidadao;
-import template.Admin;
 
 public class LoginController implements Initializable {
     
@@ -50,33 +49,7 @@ public class LoginController implements Initializable {
 
     @FXML
     void loginAdmin(ActionEvent event) {
-        try{
-            DadosCadastrais dc = new DadosCadastrais();
-            ArrayList <Admin> ad = dc.listarAdmin();
-            Admin a = null;
-            for(int i=0;i<ad.size();i++){
-                if(ad.get(i).getCpf()==Integer.parseInt(cpfAdmin.getText()) && senhaAdmin.getText().equals(ad.get(i).getSenha())){
-                    a = ad.get(i);
-                }
-            }
-            if(a == null){
-                JOptionPane.showMessageDialog(null, "Acesso Negado");
-            }else if(a.getCpf()==Integer.parseInt(cpfAdmin.getText()) && senhaAdmin.getText().equals(a.getSenha())){
-                JOptionPane.showMessageDialog(null, "Acesso Concedido");
-                MainAdminController Ma = new MainAdminController();
-                //Ma.start(new Stage());
-            }else{
-                JOptionPane.showMessageDialog(null, "Acesso Negado");
-            }
-            
-            
-        } catch (IOException ex) {
-            Logger.getLogger(CidadaoCadastroController.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(CidadaoCadastroController.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (Exception ex) {
-            Logger.getLogger(CidadaoCadastroController.class.getName()).log(Level.SEVERE, null, ex);
-        }
+
     }
 
     @FXML

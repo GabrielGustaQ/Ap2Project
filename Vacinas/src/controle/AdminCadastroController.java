@@ -16,19 +16,17 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import template.Admin;
 
 import java.util.ArrayList;
 import java.util.logging.Level;
-import template.Admin;
 
 public class AdminCadastroController {
 
     @FXML
     private PasswordField psConfirmaSenha;
-
     @FXML
-    private Label labelWarning;
-
+    private Label labelWarnig;
     @FXML
     private PasswordField psSenha;
 
@@ -51,12 +49,8 @@ public class AdminCadastroController {
     private Button confirmaButtonId;
 
     @FXML
-    private Button cancelaButtonId;
+    void cancelButton(ActionEvent event) {
 
-    @FXML
-    void cancelaButton(ActionEvent event) {
-        Stage stage = (Stage) cancelaButtonId.getScene().getWindow(); 
-        stage.close(); 
     }
 
     @FXML
@@ -64,27 +58,24 @@ public class AdminCadastroController {
         try {
             DadosCadastrais dc = new DadosCadastrais();
             boolean existe = false;
-            ArrayList <Admin> ad = dc.listarAdmin();
-                for(int i=0;i<ad.size();i++){
-                if(ad.get(i).getCpf() == Integer.parseInt(tfid.getText())){
-                   existe = true;
-                }
+            ArrayList <Admin> a = dc.listarAdmin();
+                for(int i=0;i<a.size();i++){
+                if(a.get(i).getCpf() == Integer.parseInt(tfCpf.getText())){
+                existe = true;
+               }
             }
-            
             if(existe == false){
-                if(psConfirmaSenha.getText().equals(psSenha.getText())){
+                if(psConfirmaSenha.getText().equals(psSenha.getText())){              
                     dc.cadastrarAdmin(tfNome.getText(), psSenha.getText(), tfNascimento.getText(), tfCpf.getText(), tfid.getText());
-                    JOptionPane.showMessageDialog(null,"Admin cadastrado com sucesso!!!");
-                    Stage stage = (Stage) confirmaButtonId.getScene().getWindow(); 
-                    stage.close(); 
-                    
+                    JOptionPane.showMessageDialog(null,"Cadastrado com sucesso!!!");
+                    Stage stage = (Stage) confirmaButtonId.getScene().getWindow(); //Obtendo a janela atual
+                    stage.close(); //Fechando o Stage
                 }else{
                     psWarning.setText("senhas são diferentes!!!");
                 }
             }else{
-                labelWarning.setText("Admin já cadastrado !!!");
+                labelWarnig.setText("Administrador já cadastrado !!!");
             }
-
         } catch (IOException ex) {
             Logger.getLogger(CidadaoCadastroController.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ClassNotFoundException ex) {

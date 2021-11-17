@@ -50,12 +50,8 @@ public class AgenteCadastroController {
     private Button confirmaButtonId;
 
     @FXML
-    private Button cancelaButtonId;
-
-    @FXML
     void cancelButton(ActionEvent event) {
-        Stage stage = (Stage) cancelaButtonId.getScene().getWindow(); 
-        stage.close();
+
     }
 
     @FXML
@@ -63,25 +59,23 @@ public class AgenteCadastroController {
         try {
             DadosCadastrais dc = new DadosCadastrais();
             boolean existe = false;
-            ArrayList <AgenteSaude> ag = dc.listarAgente();
-                for(int i=0;i<ag.size();i++){
-                if(ag.get(i).getCpf() == Integer.parseInt(tfRegistro.getText())){
+            ArrayList <AgenteSaude> a = dc.listarAgente();
+                for(int i=0;i<a.size();i++){
+                if(a.get(i).getCpf() == Integer.parseInt(tfCpf.getText())){
                    existe = true;
                 }
             }
-            
             if(existe == false){
                 if(psConfirmasenha.getText().equals(psSenha.getText())){
                     dc.cadastrarAgente(tfNome.getText(), psSenha.getText(), tfNascimento.getText(), tfCpf.getText(), tfRegistro.getText());
-                    JOptionPane.showMessageDialog(null,"Agente de Saude cadastrado com sucesso!!!");
-                    Stage stage = (Stage) confirmaButtonId.getScene().getWindow(); 
-                    stage.close(); 
-                    
+                    JOptionPane.showMessageDialog(null,"Cadastrado com sucesso!!!");
+                    Stage stage = (Stage) confirmaButtonId.getScene().getWindow(); //Obtendo a janela atual
+                    stage.close(); //Fechando o Stage
                 }else{
                     psWarning.setText("senhas são diferentes!!!");
                 }
             }else{
-                labelWarning.setText("Agente de Saude já cadastrado !!!");
+                labelWarning.setText("Agente ja cadastrado");
             }
 
         } catch (IOException ex) {
